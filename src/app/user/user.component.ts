@@ -22,7 +22,7 @@ export class UserComponent implements OnInit {
       avatar_url: string;
     }
     this.http.get<ApiResponse>("https://api.github.com/users/ramzanthenolph?access_token=").subscribe(data=>{
-      this.user = new User(data.url, data.login, data.html_url, data.public_repos, data.avatar_url)
+      this.user = new User(data.url, data.login, data.html_url, data.public_repos, data.avatar_url,)
     })
   }
 
