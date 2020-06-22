@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { User } from './user';
-import { Repo } from './repo'
+import { Repo } from './repo';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment.prod';
 
@@ -55,7 +55,7 @@ export class SearchService {
           console.log(error);
           reject();
         }
-      );
+      );  
     });
    }
 }

@@ -2,6 +2,6 @@
     <a class="navbar-brand">GITHUB SEARCH</a>
   <form class="form-inline" #searchForm= 'ngForm'>
     <input class="form-control mr-sm-2" type="search" placeholder="Search username" aria-label="Search" name="searchUsername" [(ngModel)]="searchUsername">
-    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit" (click) = "search()">Search</button>
   </form>
   </nav>

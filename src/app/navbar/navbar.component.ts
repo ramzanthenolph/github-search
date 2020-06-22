@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter  } from '@angular/core';
 import { User } from '../user';
+import { Repo } from '../repo'
 
 @Component({
   selector: 'app-navbar',
@@ -7,10 +8,15 @@ import { User } from '../user';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-  user:User;
+  searchUsername:string;
+  @Output() searchOutput = new EventEmitter<any>()
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
+    search(){
+      this.searchOutput.emit(this.searchUsername);
+      this.searchUsername = "";
+    }
+  
 
 }

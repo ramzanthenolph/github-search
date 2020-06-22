@@ -1,5 +1,5 @@
 
-<div class="container">
+<div class="container-fluid">
 <div class="card mb-3" style="max-width: 540px;">
     <div class="row no-gutters">
       <div class="col-md-4">
@@ -15,5 +15,13 @@
         </div>
       </div>
     </div>
+</div>
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">&nbsp;{{allrepos.name}}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">{{allrepos.created_at | date}}</h6>
+    <p class="card-text">&nbsp;{{allrepos.description}}</p>
+    <a href="{{allrepos.html_url}}" class="card-link">go to Github</a>
+  </div>
 </div>
 </div>  
